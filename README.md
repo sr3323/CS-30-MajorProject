@@ -8,3 +8,4 @@ You need to install both Arduino and TeensyDuino in order to upload this program
 Upload the code as you would do normally using the Arduino IDE. Select Teensy LC as the board, and select Keyboard as the device. If it gives you an error that means you forgot to copy usb_desc.h to the right folder or you copied it to the wrong folder. 
 # Changing the mapping of the buttons
 To change the mapping of the buttons you need to connect to the device using serial (serial monitor with the arduino IDE is one way to do this) and send any character. Then follow the instructions that the device sends you.
+# TODO: ADD HARDWARE AND ASSEMBLY INSTRUCTIONS
