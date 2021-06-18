@@ -125,9 +125,9 @@ void pressButton(int buttonNumber) {
     //Sends a control change on channel 1 based on the values stored in EEPROM.
   } else {
     //Keyboard mode
-    if (mode == 1) { //If it
+    if (mode == 1) { //If it is in keyboard mode, run this code.
       int key = button_velocity[buttonNumber];
-      if(key==32){
+      if(key==32){//if the key is 32 (ascii for space) change the keycode to be the space.
         key = KEY_SPACE;
       }else{
         if (!isUpperCase(key)) {
@@ -217,7 +217,7 @@ void remapKeyboard(int buttonNumber) {
   }
   readValue = Serial.read();
   writeAddress = (2 * buttonNumber) + 2;
-  if(readValue == ' '){
+  if(readValue == ' '){ //if the key is space, set it to 32 (ascii code for space). If I don't do this, it will write 0 to the address.
     readValue = 32;
   }
   EEPROM.write(writeAddress, readValue);
