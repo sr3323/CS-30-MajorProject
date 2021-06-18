@@ -229,9 +229,9 @@ let me know?  http://forum.pjrc.com/forums/4-Suggestions-amp-Bug-Reports
   #define PRODUCT_NAME		{'K','e','y','b','o','a','r','d'}
   #define PRODUCT_NAME_LEN	8
   #define EP0_SIZE		64
-  #define NUM_ENDPOINTS         4
+  #define NUM_ENDPOINTS         8
   #define NUM_USB_BUFFERS	14
-  #define NUM_INTERFACE		3
+  #define NUM_INTERFACE		4	
   #define SEREMU_INTERFACE      1	// Serial emulation
   #define SEREMU_TX_ENDPOINT    1
   #define SEREMU_TX_SIZE        64
@@ -247,12 +247,20 @@ let me know?  http://forum.pjrc.com/forums/4-Suggestions-amp-Bug-Reports
   #define KEYMEDIA_ENDPOINT     4
   #define KEYMEDIA_SIZE         8
   #define KEYMEDIA_INTERVAL     4
+  #define MIDI_INTERFACE        3	// MIDI
+  #define MIDI_NUM_CABLES       1
+  #define MIDI_TX_ENDPOINT      7
+  #define MIDI_TX_SIZE          64
+  #define MIDI_RX_ENDPOINT      8
+  #define MIDI_RX_SIZE          64
   #define ENDPOINT1_CONFIG	ENDPOINT_TRANSMIT_ONLY
   #define ENDPOINT2_CONFIG	ENDPOINT_RECEIVE_ONLY
   #define ENDPOINT3_CONFIG	ENDPOINT_TRANSMIT_ONLY
   #define ENDPOINT4_CONFIG	ENDPOINT_TRANSMIT_ONLY
   #define ENDPOINT5_CONFIG	ENDPOINT_TRANSMIT_ONLY
   #define ENDPOINT6_CONFIG	ENDPOINT_TRANSMIT_ONLY
+  #define ENDPOINT7_CONFIG	ENDPOINT_TRANSMIT_ONLY
+  #define ENDPOINT8_CONFIG	ENDPOINT_RECEIVE_ONLY
 
 #elif defined(USB_HID)
   #define VENDOR_ID		0x16C0
@@ -517,27 +525,27 @@ let me know?  http://forum.pjrc.com/forums/4-Suggestions-amp-Bug-Reports
   #define PRODUCT_NAME_LEN	11
   #define EP0_SIZE		64
   #define NUM_ENDPOINTS         6
-  #define NUM_USB_BUFFERS	30
-  #define NUM_INTERFACE		3
+  #define NUM_USB_BUFFERS	32
+  #define NUM_INTERFACE		4
   #define CDC_IAD_DESCRIPTOR	1
   #define CDC_STATUS_INTERFACE	0
-  #define KEYBOARD_INTERFACE    0	// Keyboard
-  #define KEYBOARD_ENDPOINT     6
-  #define KEYBOARD_SIZE         8
-  #define KEYBOARD_INTERVAL     1
-  #define CDC_DATA_INTERFACE	2	// Serial
-  #define CDC_ACM_ENDPOINT	1
-  #define CDC_RX_ENDPOINT       2
-  #define CDC_TX_ENDPOINT       3
-  #define CDC_ACM_SIZE          16
-  #define CDC_RX_SIZE           64
-  #define CDC_TX_SIZE           64
   #define MIDI_INTERFACE        1	// MIDI
   #define MIDI_NUM_CABLES       1
   #define MIDI_TX_ENDPOINT      4
   #define MIDI_TX_SIZE          64
   #define MIDI_RX_ENDPOINT      5
   #define MIDI_RX_SIZE          64
+  #define KEYBOARD_INTERFACE    2	// Keyboard
+  #define KEYBOARD_ENDPOINT     6
+  #define KEYBOARD_SIZE         8
+  #define KEYBOARD_INTERVAL     1
+  #define CDC_DATA_INTERFACE	3	// Serial
+  #define CDC_ACM_ENDPOINT	1
+  #define CDC_RX_ENDPOINT       2
+  #define CDC_TX_ENDPOINT       3
+  #define CDC_ACM_SIZE          16
+  #define CDC_RX_SIZE           64
+  #define CDC_TX_SIZE           64
   #define ENDPOINT1_CONFIG	ENDPOINT_TRANSMIT_ONLY
   #define ENDPOINT2_CONFIG	ENDPOINT_RECEIVE_ONLY
   #define ENDPOINT3_CONFIG	ENDPOINT_TRANSMIT_ONLY
